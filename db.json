@@ -1,0 +1,601 @@
+{
+  "accounts": [
+    {
+      "username": "almnofiadeveloper123",
+      "passwordHash": "$2a$10$ETNFrgN736DKNuSHEQVW5.IQ8kNC5MkFs6qE85nMHD8D/3E1NskZm",
+      "role": "developer"
+    },
+    {
+      "username": "nadernezar",
+      "passwordHash": "$2a$10$mFuzIloE6m7ezzwxwuh5ne.AO75eHlj31ooTHF2GECjpiBPnWAaja",
+      "role": "student"
+    },
+    {
+      "username": "mohamedkamal",
+      "passwordHash": "$2a$10$dzp0mJobWaD3EI6apsfHNezNrTbufCpqX2/CFtNmTUYZD/w6ItZW6",
+      "role": "lecturer",
+      "allowedSections": []
+    },
+    {
+      "username": "mm",
+      "passwordHash": "$2a$10$FWhvtEYF.foVvadpYBST2ugmc8Hjt49hDCbg4m7auJf.K75Ahd5xO",
+      "role": "student",
+      "allowedSections": []
+    },
+    {
+      "username": "123",
+      "passwordHash": "$2a$10$xdPBBuPn59C5tQTOlGHIcOUzJlbTswXIRmiVs/lTXuaWhUdzkYPLq",
+      "role": "lecturer",
+      "allowedSections": []
+    },
+    {
+      "username": "0000",
+      "passwordHash": "$2a$10$pvbOHC1cgCoC1kmwQPaeM.IC2wV400u.ZFase3txyeWWpkOXHGbvq",
+      "role": "lecturer",
+      "allowedSections": []
+    },
+    {
+      "username": "1111",
+      "passwordHash": "$2a$10$fXTTFXv79.KDfPQtZHU0j.YROpYuEm7t3dHzEw0r9oEDw9DkETwJ6",
+      "role": "student",
+      "allowedSections": []
+    }
+  ],
+  "session": {
+    "sessionId": "SES-FG4HM",
+    "course": "تكنولوجيا معلومات",
+    "lecturer": "د.هاني فوود",
+    "payload": "{\"sessionId\":\"SES-FG4HM\",\"course\":\"تكنولوجيا معلومات\",\"lecturer\":\"د.هاني فوود\",\"payload\":\"{\\\"sessionId\\\":\\\"SES-FG4HM\\\",\\\"course\\\":\\\"تكنولوجيا معلومات\\\",\\\"lecturer\\\":\\\"د.هاني فوود\\\",\\\"payload\\\":\\\"{\\\\\\\"sessionId\\\\\\\":\\\\\\\"SES-FG4HM\\\\\\\",\\\\\\\"course\\\\\\\":\\\\\\\"تكنولوجيا معلومات\\\\\\\",\\\\\\\"lecturer\\\\\\\":\\\\\\\"د.هاني فوود\\\\\\\",\\\\\\\"ts\\\\\\\":1765315093010}\\\",\\\"createdAt\\\":1765315093010,\\\"ts\\\":1765315098643}\",\"createdAt\":1765315093010,\"ts\":1765315099884}",
+    "createdAt": 1765315093010
+  },
+  "attendance": [
+    {
+      "studentId": "محمد كمال",
+      "sessionId": "SES-FG4HM",
+      "course": "تكنولوجيا معلومات",
+      "time": 1765315148447,
+      "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+      "source": "manual"
+    },
+    {
+      "studentId": "1231123",
+      "sessionId": "SES-FG4HM",
+      "course": "تكنولوجيا معلومات",
+      "time": 1765315163516,
+      "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+      "source": "manual"
+    }
+  ],
+  "histories": {
+    "123": [
+      {
+        "role": "lecturer",
+        "sessionId": "SES-Q3OEF",
+        "courseId": "C1",
+        "sectionId": "S4",
+        "startAt": 1765714148758,
+        "endAt": 1765719548758,
+        "createdAt": 1765714148758
+      }
+    ],
+    "1111": [
+      {
+        "username": "1111",
+        "sessionId": "SES-PW96O",
+        "courseId": "C1",
+        "sectionId": "S1",
+        "time": 1765720992927,
+        "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+        "source": "qr",
+        "present": true,
+        "role": "student"
+      },
+      {
+        "username": "1111",
+        "sessionId": "SES-PW96O",
+        "courseId": "C1",
+        "sectionId": "S1",
+        "time": 1765721024015,
+        "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+        "source": "qr",
+        "present": true,
+        "role": "student"
+      },
+      {
+        "username": "1111",
+        "sessionId": "SES-PW96O",
+        "courseId": "C1",
+        "sectionId": "S1",
+        "time": 1765721084326,
+        "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+        "source": "qr",
+        "present": true,
+        "role": "student"
+      },
+      {
+        "username": "1111",
+        "sessionId": "SES-PW96O",
+        "courseId": "C1",
+        "sectionId": "S1",
+        "time": 1765721097860,
+        "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+        "source": "qr",
+        "present": true,
+        "role": "student"
+      }
+    ],
+    "511231": [
+      {
+        "studentId": "511231",
+        "sessionId": "SES-7L1TW",
+        "courseId": "C1",
+        "sectionId": "S1",
+        "time": 1765316767843,
+        "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+        "source": "qr",
+        "present": true
+      }
+    ],
+    "1231123": [
+      {
+        "studentId": "1231123",
+        "sessionId": "SES-FG4HM",
+        "course": "تكنولوجيا معلومات",
+        "time": 1765315163516,
+        "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+        "source": "manual"
+      }
+    ],
+    "محمد كمال": [
+      {
+        "studentId": "محمد كمال",
+        "sessionId": "SES-FG4HM",
+        "course": "تكنولوجيا معلومات",
+        "time": 1765315148447,
+        "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+        "source": "manual"
+      }
+    ],
+    "almnofiadeveloper123": [
+      {
+        "role": "lecturer",
+        "sessionId": "SES-TF1D9",
+        "courseId": "C1",
+        "sectionId": "S1",
+        "startAt": 1765317094982,
+        "endAt": 1765322494982,
+        "createdAt": 1765317094982
+      },
+      {
+        "username": "almnofiadeveloper123",
+        "sessionId": "SES-TF1D9",
+        "courseId": "C1",
+        "sectionId": "S1",
+        "time": 1765317110118,
+        "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+        "source": "qr",
+        "present": true,
+        "role": "student"
+      },
+      {
+        "username": "almnofiadeveloper123",
+        "sessionId": "SES-TF1D9",
+        "courseId": "C1",
+        "sectionId": "S1",
+        "time": 1765317115775,
+        "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+        "source": "qr",
+        "present": true,
+        "role": "student"
+      },
+      {
+        "username": "almnofiadeveloper123",
+        "sessionId": "SES-TF1D9",
+        "courseId": "C1",
+        "sectionId": "S1",
+        "time": 1765317116423,
+        "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+        "source": "qr",
+        "present": true,
+        "role": "student"
+      },
+      {
+        "username": "almnofiadeveloper123",
+        "sessionId": "SES-TF1D9",
+        "courseId": "C1",
+        "sectionId": "S1",
+        "time": 1765317116781,
+        "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+        "source": "qr",
+        "present": true,
+        "role": "student"
+      },
+      {
+        "role": "lecturer",
+        "sessionId": "SES-13408",
+        "courseId": "C1",
+        "sectionId": "S1",
+        "startAt": 1765317562318,
+        "endAt": 1765320262318,
+        "createdAt": 1765317562318
+      },
+      {
+        "username": "almnofiadeveloper123",
+        "sessionId": "SES-13408",
+        "courseId": "C1",
+        "sectionId": "S1",
+        "time": 1765317566785,
+        "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+        "source": "qr",
+        "present": true,
+        "role": "student"
+      },
+      {
+        "username": "almnofiadeveloper123",
+        "sessionId": "SES-13408",
+        "courseId": "C1",
+        "sectionId": "S1",
+        "time": 1765317578056,
+        "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+        "source": "qr",
+        "present": true,
+        "role": "student"
+      },
+      {
+        "role": "lecturer",
+        "sessionId": "SES-900VQ",
+        "courseId": "C1",
+        "sectionId": "S1",
+        "startAt": 1765317804435,
+        "endAt": 1765321404435,
+        "createdAt": 1765317804435
+      },
+      {
+        "username": "almnofiadeveloper123",
+        "sessionId": "SES-900VQ",
+        "courseId": "C1",
+        "sectionId": "S1",
+        "time": 1765317830508,
+        "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+        "source": "qr",
+        "present": true,
+        "role": "student"
+      },
+      {
+        "username": "almnofiadeveloper123",
+        "sessionId": "SES-900VQ",
+        "courseId": "C1",
+        "sectionId": "S1",
+        "time": 1765317886179,
+        "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+        "source": "qr",
+        "present": true,
+        "role": "student"
+      },
+      {
+        "role": "lecturer",
+        "sessionId": "SES-25LQO",
+        "courseId": "C1",
+        "sectionId": "S1",
+        "startAt": 1765318085466,
+        "endAt": 1765323485466,
+        "createdAt": 1765318085466
+      },
+      {
+        "username": "almnofiadeveloper123",
+        "sessionId": "SES-25LQO",
+        "courseId": "C1",
+        "sectionId": "S1",
+        "time": 1765318103805,
+        "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+        "source": "qr",
+        "present": true,
+        "role": "student"
+      },
+      {
+        "username": "almnofiadeveloper123",
+        "sessionId": "SES-25LQO",
+        "courseId": "C1",
+        "sectionId": "S1",
+        "time": 1765318108470,
+        "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+        "source": "qr",
+        "present": true,
+        "role": "student"
+      },
+      {
+        "username": "almnofiadeveloper123",
+        "sessionId": "SES-25LQO",
+        "courseId": "C1",
+        "sectionId": "S1",
+        "time": 1765318116218,
+        "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+        "source": "qr",
+        "present": true,
+        "role": "student"
+      },
+      {
+        "username": "almnofiadeveloper123",
+        "sessionId": "SES-25LQO",
+        "courseId": "C1",
+        "sectionId": "S1",
+        "time": 1765318116465,
+        "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+        "source": "qr",
+        "present": true,
+        "role": "student"
+      },
+      {
+        "username": "almnofiadeveloper123",
+        "sessionId": "SES-25LQO",
+        "courseId": "C1",
+        "sectionId": "S1",
+        "time": 1765318141362,
+        "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+        "source": "qr",
+        "present": true,
+        "role": "student"
+      },
+      {
+        "username": "almnofiadeveloper123",
+        "sessionId": "SES-25LQO",
+        "courseId": "C1",
+        "sectionId": "S1",
+        "time": 1765318142825,
+        "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+        "source": "qr",
+        "present": true,
+        "role": "student"
+      },
+      {
+        "role": "lecturer",
+        "sessionId": "SES-IT7KV",
+        "courseId": "C1",
+        "sectionId": "S1",
+        "startAt": 1765318612988,
+        "endAt": 1765324012988,
+        "createdAt": 1765318612988
+      },
+      {
+        "username": "almnofiadeveloper123",
+        "sessionId": "SES-IT7KV",
+        "courseId": "C1",
+        "sectionId": "S1",
+        "time": 1765318620189,
+        "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+        "source": "qr",
+        "present": true,
+        "role": "student"
+      },
+      {
+        "username": "almnofiadeveloper123",
+        "sessionId": "SES-IT7KV",
+        "courseId": "C1",
+        "sectionId": "S1",
+        "time": 1765318627536,
+        "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+        "source": "qr",
+        "present": true,
+        "role": "student"
+      },
+      {
+        "role": "lecturer",
+        "sessionId": "SES-UZEVN",
+        "courseId": "C1",
+        "sectionId": "S1",
+        "startAt": 1765319233684,
+        "endAt": 1765324633684,
+        "createdAt": 1765319233684
+      },
+      {
+        "username": "almnofiadeveloper123",
+        "sessionId": "SES-UZEVN",
+        "courseId": "C1",
+        "sectionId": "S1",
+        "time": 1765319237498,
+        "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+        "source": "qr",
+        "present": true,
+        "role": "student"
+      },
+      {
+        "username": "almnofiadeveloper123",
+        "sessionId": "SES-UZEVN",
+        "courseId": "C1",
+        "sectionId": "S1",
+        "time": 1765321871704,
+        "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+        "source": "qr",
+        "present": true,
+        "role": "student"
+      },
+      {
+        "username": "almnofiadeveloper123",
+        "sessionId": "SES-UZEVN",
+        "courseId": "C1",
+        "sectionId": "S1",
+        "time": 1765321872846,
+        "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+        "source": "qr",
+        "present": true,
+        "role": "student"
+      },
+      {
+        "role": "lecturer",
+        "sessionId": "SES-MWXI2",
+        "courseId": "C1",
+        "sectionId": "S1",
+        "startAt": 1765321890768,
+        "endAt": 1765327290768,
+        "createdAt": 1765321890768
+      },
+      {
+        "role": "lecturer",
+        "sessionId": "SES-HE0UQ",
+        "courseId": "C1",
+        "sectionId": "S1",
+        "startAt": 1765321891290,
+        "endAt": 1765327291290,
+        "createdAt": 1765321891290
+      },
+      {
+        "role": "lecturer",
+        "sessionId": "SES-9MW0Z",
+        "courseId": "C1",
+        "sectionId": "S1",
+        "startAt": 1765321892388,
+        "endAt": 1765327292388,
+        "createdAt": 1765321892388
+      },
+      {
+        "role": "lecturer",
+        "sessionId": "SES-BTEDI",
+        "courseId": "C1",
+        "sectionId": "S1",
+        "startAt": 1765321893953,
+        "endAt": 1765327293953,
+        "createdAt": 1765321893953
+      },
+      {
+        "username": "almnofiadeveloper123",
+        "sessionId": "SES-BTEDI",
+        "courseId": "C1",
+        "sectionId": "S1",
+        "time": 1765321896828,
+        "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+        "source": "qr",
+        "present": true,
+        "role": "student"
+      }
+    ],
+    "nadernezar": [
+      {
+        "username": "nadernezar",
+        "sessionId": "SES-900VQ",
+        "courseId": "C1",
+        "sectionId": "S1",
+        "time": 1765317859034,
+        "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36",
+        "source": "qr",
+        "present": true,
+        "role": "student"
+      }
+    ],
+    "mohamedkamal": [
+      {
+        "role": "lecturer",
+        "sessionId": "SES-WGBUR",
+        "courseId": "C1",
+        "sectionId": "S1",
+        "startAt": 1765665161650,
+        "endAt": 1765670561650,
+        "createdAt": 1765665161650
+      },
+      {
+        "username": "mohamedkamal",
+        "sessionId": "SES-WGBUR",
+        "courseId": "C1",
+        "sectionId": "S1",
+        "time": 1765665176493,
+        "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+        "source": "qr",
+        "present": true,
+        "role": "student"
+      },
+      {
+        "username": "mohamedkamal",
+        "sessionId": "SES-WGBUR",
+        "courseId": "C1",
+        "sectionId": "S1",
+        "time": 1765665183663,
+        "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+        "source": "qr",
+        "present": true,
+        "role": "student"
+      },
+      {
+        "username": "mohamedkamal",
+        "sessionId": "SES-WGBUR",
+        "courseId": "C1",
+        "sectionId": "S1",
+        "time": 1765665224630,
+        "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+        "source": "qr",
+        "present": true,
+        "role": "student"
+      },
+      {
+        "username": "mohamedkamal",
+        "sessionId": "SES-WGBUR",
+        "courseId": "C1",
+        "sectionId": "S1",
+        "time": 1765665688881,
+        "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+        "source": "qr",
+        "present": true,
+        "role": "student"
+      },
+      {
+        "username": "mohamedkamal",
+        "sessionId": "SES-WGBUR",
+        "courseId": "C1",
+        "sectionId": "S1",
+        "time": 1765665893446,
+        "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+        "source": "qr",
+        "present": true,
+        "role": "student"
+      }
+    ],
+    "mm": [
+      {
+        "username": "mm",
+        "sessionId": "SES-WGBUR",
+        "courseId": "C1",
+        "sectionId": "S1",
+        "time": 1765665661028,
+        "device": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0",
+        "source": "qr",
+        "present": true,
+        "role": "student"
+      }
+    ],
+    "0000": [
+      {
+        "role": "lecturer",
+        "sessionId": "SES-PW96O",
+        "courseId": "C1",
+        "sectionId": "S1",
+        "startAt": 1765720911474,
+        "endAt": 1765726311474,
+        "createdAt": 1765720911474
+      }
+    ]
+  },
+  "sessions": {
+    "C1-S1": {
+      "sessionId": "SES-PW96O",
+      "courseId": "C1",
+      "sectionId": "S1",
+      "lecturer": "0000",
+      "payload": "{\"sessionId\":\"SES-PW96O\",\"courseId\":\"C1\",\"sectionId\":\"S1\",\"lecturer\":\"0000\",\"ts\":1765720911474}",
+      "createdAt": 1765720911474,
+      "startAt": 1765720911474,
+      "endAt": 1765726311474,
+      "durationMinutes": 90,
+      "active": true
+    },
+    "C1-S4": {
+      "sessionId": "SES-Q3OEF",
+      "courseId": "C1",
+      "sectionId": "S4",
+      "lecturer": "123",
+      "payload": "{\"sessionId\":\"SES-Q3OEF\",\"courseId\":\"C1\",\"sectionId\":\"S4\",\"lecturer\":\"123\",\"ts\":1765714148758}",
+      "createdAt": 1765714148758,
+      "startAt": 1765714148758,
+      "endAt": 1765719548758,
+      "durationMinutes": 90,
+      "active": true
+    }
+  }
+}

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>نظام الحضور الذكي | كلية التربية النوعية - جامعة المنوفية</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://unpkg.com/qrcode/build/qrcode.min.js"></script>
+  <script src="https://unpkg.com/html5-qrcode"></script>
+</head>
+<body>
+  <div class="page">
+    <header class="hero glass">
+      <div class="hero__text">
+        <p class="eyebrow">جامعة المنوفية · كلية التربية النوعية</p>
+        <h1>نظام الحضور الذكي</h1>
+        <p class="lede">منصة ويب للحضور الذكي باستخدام QR والذكاء الاصطناعي، تحت إشراف وبرمجة: Mohamed Kamal .</p>
+        <div class="cta">
+          <button id="lecturerTabBtn" class="btn primary">لوحة المحاضر</button>
+          <button id="studentTabBtn" class="btn ghost">لوحة الطالب</button>
+        </div>
+      </div>
+      <div class="hero__viz">
+        <div class="orb orb--green"></div>
+        <div class="orb orb--yellow"></div>
+        <div class="screen glass">
+          <p class="tiny-label">حضور لحظي</p>
+          <div class="pulse-row">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+          </div>
+          <div class="hero__stat">
+            <p class="tiny-label">الجلسة الحالية</p>
+            <h3 id="heroSessionName">لا توجد جلسة</h3>
+          </div>
+          <div class="hero__stat">
+            <div class="inline">
+              <div>
+                <p class="tiny-label">عدد الحضور</p>
+                <h3 id="heroAttendanceCount">0</h3>
+              </div>
+              <button id="showAttendeesBtn" class="btn ghost tiny-btn hidden">عرض</button>
+            </div>
+            <p class="tiny-label" id="heroCapacityHint">من 50 طالب</p>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="layout">
+      <aside class="sidebar glass hidden" id="sideBar">
+        <div class="side-card glass soft hidden" id="devSide">
+          <div class="card__head">
+            <h3>لوحة المبرمج</h3>
+            <span class="chip ai">Developer</span>
+          </div>
+          <p class="hint">إنشاء حسابات جديدة (لا تسجيل ذاتي).</p>
+          <label class="form-label">اسم مستخدم جديد</label>
+          <input id="newUser" class="input" type="text" placeholder="username">
+          <label class="form-label">كلمة المرور</label>
+          <input id="newPass" class="input" type="text" placeholder="password">
+          <label class="form-label">الدور</label>
+          <select id="newRole" class="input">
+            <option value="student">Student</option>
+            <option value="lecturer">Lecturer</option>
+          </select>
+          <button id="createAccountBtn" class="btn primary w-100" style="margin-top:10px;">إنشاء حساب</button>
+        </div>
+
+        <div class="side-card glass soft hidden" id="lecturerSide">
+          <div class="card__head">
+            <h3>لوحة المحاضر</h3>
+            <span class="chip">Lecturer</span>
+          </div>
+          <p class="hint">ابدأ المحاضرة من لوحة السيكشن، ويمكنك الطرد والتصدير.</p>
+          <button class="btn ghost w-100" onclick="document.getElementById('sectionPanel').scrollIntoView({behavior:'smooth'})">فتح لوحة السيكشن</button>
+        </div>
+
+        <div class="side-card glass soft hidden" id="devActive">
+          <div class="card__head">
+            <h3>سيكشنات نشطة</h3>
+            <span class="chip ai">Developer</span>
+          </div>
+          <div id="activeSessionsList" class="list"></div>
+        </div>
+
+        <div class="side-card glass soft" id="studentSide">
+          <div class="card__head">
+            <h3>لوحة الطالب</h3>
+            <span class="chip success">Student</span>
+          </div>
+          <p class="hint">اختر مادة وسيكشن ثم انضم بالرمز أو QR.</p>
+          <button class="btn ghost w-100" onclick="document.getElementById('sectionPanel').scrollIntoView({behavior:'smooth'})">اذهب للانضمام</button>
+        </div>
+      </aside>
+
+      <main>
+      <section class="auth glass" id="loginGate">
+        <div>
+          <p class="tiny-label">تسجيل الدخول أولاً</p>
+          <h2>مرحباً، قم بتسجيل الدخول للوصول للنظام</h2>
+        </div>
+        <div class="auth__fields">
+          <input id="loginUser" class="input" type="text" placeholder="اسم المستخدم">
+          <input id="loginPass" class="input" type="password" placeholder="كلمة المرور">
+          <button id="loginBtn" class="btn primary">دخول</button>
+        </div>
+      </section>
+
+      <section class="glass auth hidden" id="userBar">
+        <div class="auth__status">
+          <p class="tiny-label">Hi:</p>
+          <strong id="currentUser">—</strong>
+          <span id="currentRole" class="pill">-</span>
+        </div>
+        <div class="auth__fields">
+          <button id="logoutBtn" class="btn ghost">تسجيل خروج</button>
+        </div>
+      </section>
+
+      <section class="panel glass hidden" id="coursesPanel">
+        <div class="panel__head">
+          <div>
+            <p class="tiny-label">اختر المادة والسيكشن</p>
+            <h2>مواد الفصل (10 مواد × 5 سيكشن)</h2>
+          </div>
+          <span class="pill">متاح للجميع</span>
+        </div>
+        <div id="coursesGrid" class="courses-grid"></div>
+      </section>
+
+      <section class="panel glass hidden" id="sectionPanel">
+        <div class="panel__head">
+          <div>
+            <p class="tiny-label">المادة المختارة</p>
+            <h2 id="selectedCourseName">—</h2>
+            <p class="tiny-label" id="selectedSectionName">—</p>
+          </div>
+          <span class="pill" id="sessionStatusPill">لا توجد محاضرة</span>
+        </div>
+
+        <div class="grid two">
+          <div class="card glass soft">
+            <div class="card__head">
+              <h3>حالة السيكشن</h3>
+              <span class="chip" id="sessionActiveChip">متوقف</span>
+            </div>
+            <p class="hint" id="sessionHint">اختر “بدء محاضرة” لفتح الحضور.</p>
+            <label class="form-label">مدة المحاضرة (دقائق)</label>
+            <input id="durationInput" class="input" type="number" min="15" max="240" value="90">
+            <div id="qrCanvas" class="qr-box"></div>
+            <div class="inline">
+              <p class="tiny-label">رمز الانضمام</p>
+              <strong id="sessionCodeDisplay">—</strong>
+            </div>
+            <div class="stack">
+              <button id="startSessionBtn" class="btn primary w-100">بدء محاضرة</button>
+              <button id="refreshQrBtn" class="btn ghost w-100">تحديث الكود</button>
+              <button id="endSessionBtn" class="btn ghost w-100">إنهاء المحاضرة</button>
+            </div>
+          </div>
+
+          <div class="card glass soft">
+            <div class="card__head">
+              <h3>انضمام الطالب</h3>
+              <span class="chip success">مسح QR أو إدخال رمز</span>
+            </div>
+            <div id="reader" class="qr-reader"></div>
+            <input id="manualScanInput" class="input" type="text" placeholder="أدخل الرمز أو الصق بيانات QR">
+            <button id="manualScanBtn" class="btn primary w-100">انضمام الآن</button>
+            <button id="leaveBtn" class="btn ghost w-100">مغادرة السيكشن</button>
+            <p class="hint">إذا لم تبدأ المحاضرة سيخبرك النظام.</p>
+          </div>
+        </div>
+
+        <div class="grid two">
+          <div class="card glass soft">
+            <div class="card__head">
+              <h3>الحضور الحالي</h3>
+              <span class="chip" id="attendeeCountChip">0 طالب</span>
+            </div>
+            <div id="attendanceList" class="list"></div>
+            <button id="exportBtn" class="btn primary w-100">تصدير الحضور (Excel)</button>
+          </div>
+
+          <div class="card glass soft">
+            <div class="card__head">
+              <h3>إدارة (للمحاضر)</h3>
+              <span class="chip ai">تحكم</span>
+            </div>
+            <p class="hint">طرد طالب من السيكشن:</p>
+            <div class="inline-form">
+              <input id="kickStudentId" type="text" class="input" placeholder="رقم جامعي">
+              <button id="kickBtn" class="btn ghost">طرد</button>
+            </div>
+            <p class="hint">إضافة يدويًا (عند التعذر):</p>
+            <div class="inline-form">
+              <input id="manualStudentId" type="text" class="input" placeholder="رقم جامعي">
+              <button id="manualAddBtn" class="btn ghost">إضافة</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid two">
+          <div class="card glass soft hidden" id="lecturerHistoryCard">
+            <div class="card__head">
+              <h3>سجل محاضراتي</h3>
+              <span class="chip">History</span>
+            </div>
+            <button id="loadMyHistoryBtn" class="btn ghost w-100">عرض سجل المحاضرات</button>
+            <div id="myHistoryList" class="list" style="margin-top:10px;"></div>
+          </div>
+        </div>
+
+        <div class="card glass soft hidden" id="devPanel">
+          <div class="card__head">
+            <h3>Developer Section</h3>
+            <span class="chip ai">خاص بالمبرمج</span>
+          </div>
+          <p class="hint">حساب الدخول: user: almnofiadeveloper123 — pass: almnofiadeveloper123123</p>
+          <div class="grid two">
+            <div>
+              <label class="form-label">اسم مستخدم جديد</label>
+              <input id="newUser" class="input" type="text" placeholder="username">
+            </div>
+            <div>
+              <label class="form-label">كلمة المرور</label>
+              <input id="newPass" class="input" type="text" placeholder="password">
+            </div>
+          </div>
+          <label class="form-label">الدور</label>
+          <select id="newRole" class="input">
+            <option value="student">Student</option>
+            <option value="lecturer">Lecturer</option>
+          </select>
+          <label class="form-label">السيكشنات المسموحة (C1-S1,C2-S3 ...)</label>
+          <input id="newAllowed" class="input" type="text" placeholder="مثال: C1-S1,C2-S2">
+          <button id="createAccountBtn" class="btn primary w-100" style="margin-top:10px;">إنشاء حساب جديد</button>
+          <p class="hint">لا يوجد تسجيل ذاتي؛ فقط المبرمج ينشئ الحسابات.</p>
+        </div>
+      </section>
+      </main>
+    </div>
+  </div>
+
+  <div id="toastContainer" class="toasts"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
